@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MultimediaGo</string>
+    <string name="play_music">Play music</string>
+    <string name="play_video">Play video</string>
+    <string name="stop">Stop all</string>
+    <string name="link_to_play">
+        https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3
+    </string>
+    <string name="video_link_to_play">
+        https://ia601209.us.archive.org/17/items/Jimi_Hendrix_Hey_Joe_/Jimi%20Hendrix_Hey%20Joe%20.mp4
+    </string>
 </resources>
