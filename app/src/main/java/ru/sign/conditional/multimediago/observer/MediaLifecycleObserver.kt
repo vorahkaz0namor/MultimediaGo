@@ -1,6 +1,7 @@
-package ru.sign.conditional.multimediago
+package ru.sign.conditional.multimediago.observer
 
 import android.media.MediaPlayer
+import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.LifecycleOwner

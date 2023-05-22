@@ -1,20 +1,24 @@
-package ru.sign.conditional.multimediago
+package ru.sign.conditional.multimediago.activity
 
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.MediaController
 import androidx.annotation.RawRes
 import androidx.annotation.StringRes
-import ru.sign.conditional.multimediago.databinding.ActivityMainBinding
+import androidx.fragment.app.Fragment
+import ru.sign.conditional.multimediago.R
+import ru.sign.conditional.multimediago.databinding.FragmentLectureBinding
+import ru.sign.conditional.multimediago.observer.MediaLifecycleObserver
+import ru.sign.conditional.multimediago.util.viewBinding
 
-class MainActivity : AppCompatActivity() {
-    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+class LectureFragment : Fragment(R.layout.fragment_lecture) {
+    private val binding by viewBinding(FragmentLectureBinding::bind)
     private val observer = MediaLifecycleObserver()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         lifecycle.addObserver(observer)
         binding.apply {
             musicPlayButton.setOnClickListener {
@@ -67,7 +71,7 @@ class MainActivity : AppCompatActivity() {
     private fun setNetVideo(@StringRes link: Int) {
         binding.videoView.apply {
             // Медиаконтроллер для управления воспроизведением
-            setMediaController(MediaController(this@MainActivity))
+            setMediaController(MediaController(context))
             setVideoURI(
                 Uri.parse(getString(link))
             )
