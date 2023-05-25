@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.AppTheme.StateButton" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="icon">@drawable/state_selector</item>
+        <item name="iconTint">?attr/colorControlNormal</item>
+        <item name="iconSize">@dimen/state_button_size</item>
+        <item name="rippleColor">@color/transparent</item>
+        <item name="iconPadding">@dimen/zero_dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:minWidth">@dimen/zero_dp</item>
+    </style>
+
+    <style name="Widget.AppTheme.TrackText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:padding">@dimen/title_padding</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+    </style>
+</resources>

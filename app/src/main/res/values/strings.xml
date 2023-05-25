@@ -9,4 +9,13 @@
     <string name="video_link_to_play">
         https://ia601209.us.archive.org/17/items/Jimi_Hendrix_Hey_Joe_/Jimi%20Hendrix_Hey%20Joe%20.mp4
     </string>
+    <string name="dash_to_play">
+        <![CDATA[https://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0]]>
+    </string>
+    <string name="sample_track_length">3:33</string>
+    <string name="album_the_word">ALBUM</string>
+    <string name="performer_name">Performer: %1$s</string>
+    <string name="album_published">Year: %1$s</string>
+    <string name="album_genre">Genre: %1$s</string>
+    <string name="should_select">You should select some track first...</string>
 </resources>

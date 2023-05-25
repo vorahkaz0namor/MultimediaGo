@@ -24,6 +24,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            buildConfigField "String", "BASE_URL", '"https://raw.githubusercontent.com/netology-code/andad-homeworks/master/09_multimedia/data/"'
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -38,6 +41,7 @@ dependencies {
 
     def core_version = "1.10.1"
     def appcompat_version = "1.6.1"
+    def activity_version = "1.7.2"
     def mdc_version = "1.9.0"
     def constraint_layout_version = "2.1.4"
     def lifecycle_version = "2.6.1"
@@ -48,8 +52,11 @@ dependencies {
 
     implementation "androidx.core:core-ktx:$core_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
     implementation "com.google.android.material:material:$mdc_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     implementation "androidx.media3:media3-exoplayer:$exoplayer_version"
     implementation "androidx.media3:media3-exoplayer-dash:$exoplayer_version"
