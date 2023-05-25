@@ -26,7 +26,7 @@ class LectureFragment : Fragment(R.layout.fragment_lecture) {
                 setNetDataSource(R.string.link_to_play)
             }
             videoPlayButton.setOnClickListener {
-                setNetVideo(R.string.video_link_to_play)
+                setNetVideo(R.string.dash_to_play)
             }
             stopButton.setOnClickListener {
                 observer.mediaPlayer?.stop()
