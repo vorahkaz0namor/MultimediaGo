@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
     private lateinit var adapter: TrackAdapter
     private val observer by lazy {
-        ExoMediaLifecycleObserver(viewModel) {
+        ExoMediaLifecycleObserver(this, viewModel) {
             binding.exoplayerView.player = it
         }
     }

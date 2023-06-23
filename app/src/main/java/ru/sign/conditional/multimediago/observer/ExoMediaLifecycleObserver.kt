@@ -13,6 +13,7 @@ import ru.sign.conditional.multimediago.viewmodel.AlbumViewModel
 private const val EXOPLAYER_TAG = "EXOPLAYER"
 
 class ExoMediaLifecycleObserver(
+    private val context: Context,
     private val viewModel: AlbumViewModel,
     private val onPlayerReady: (ExoPlayer) -> Unit
 ) : LifecycleEventObserver {
@@ -37,7 +38,7 @@ class ExoMediaLifecycleObserver(
     }
 
     private fun initializePlayer(source: LifecycleOwner) {
-        player = ExoPlayer.Builder(source as Context)
+        player = ExoPlayer.Builder(context)
             .build()
             .also {
                 mediaItems = viewModel.album.value?.tracks?.map { track ->

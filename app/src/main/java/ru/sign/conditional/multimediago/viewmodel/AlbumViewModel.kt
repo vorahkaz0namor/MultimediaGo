@@ -73,7 +73,12 @@ class AlbumViewModel : ViewModel() {
             published = "2009, 2010, 2011, 2013",
             genre = "Electronic",
             tracks = buildList {
-                for (i in 1..16) {
+                add(Track(
+                    id = 0,
+                    file = "https://ik.imagekit.io/jwudrxfj5ek/9eb9cfb5-5767-46ba-8135-c26237ab3704._Pk9yQXZ2D.mp3",
+                    title = "Track #1"
+                ))
+                for (i in 2..16) {
                     val track = Track(
                         file = "$BASE_URL$i.mp3",
                         title = "Track #$i"
